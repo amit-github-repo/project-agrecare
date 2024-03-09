@@ -1,0 +1,68 @@
+/*	
+CREATE TRIGGER before_coin_master_credit BEFORE UPDATE ON coin_master FOR EACH ROW    
+BEGIN    
+        SET NEW.credit_coin = OLD.credit_coin + NEW.credit_coin;    
+END //
+
+
+//System.out.println("userPage call..");
+		
+
+	@GetMapping("/home")
+	public String home(Model model){
+		System.out.println("This is Home URL");
+		model.addAttribute("name","Rehan Ansari");
+		model.addAttribute("id",36457);
+
+		List<String> friend = new ArrayList<String>();
+		friend.add("Ram");
+		friend.add("Shayam");
+		friend.add("Ron");
+		model.addAttribute("f",friend);
+		return "home";
+	}
+
+	@GetMapping("/home")
+	public ModelAndView home(){
+		System.out.println();
+		System.out.println("This is Home Page");
+		ModelAndView modelandview = new ModelAndView();
+		modelandview.addObject("name","Rehan Ansari");
+		modelandview.addObject("roll",36457);
+
+		LocalDateTime now = LocalDateTime.now();
+		modelandview.addObject("now",now);
+
+		modelandview.setViewName("home");
+		return modelandview;
+	}
+
+	@PostMapping("/loginex")
+	public String loginex(	@RequestParam(name="email") String email,
+							@RequestParam("password") String pass,Model model){
+		System.out.println("Email :"+email);
+		System.out.println("Password :"+pass);
+		model.addAttribute("sms","Success.");
+		return "home";
+	}
+	
+	@PostMapping("/loginex")
+	public String loginex(	@RequestParam(name="email") String email,
+							@RequestParam("password") String pass,Model m){
+		User obj = new User();
+		obj.setEmail(email);
+		obj.setPassword(pass);
+
+		m.addAttribute(obj);
+		return "home";
+	}
+
+	@PostMapping("/loginex")
+	public String loginex( @ModelAttribute("haa") User obj,Model m){
+		System.out.println(obj);
+		System.out.println(obj.getEmail());
+		System.out.println(obj.getPassword());
+		m.addAttribute("head","Code with Amit");
+		return "home";
+	}
+*/
