@@ -1,0 +1,8 @@
+com\agregoldtest1\agregoldtest1\Agregoldtest1Application.class
+com\agregoldtest1\agregoldtest1\ControllerLayer\SellerController.class
+model\User.class
+com\agregoldtest1\agregoldtest1\ControllerLayer\AdminController.class
+com\agregoldtest1\agregoldtest1\ControllerLayer\DoctorController.class
+com\agregoldtest1\agregoldtest1\ControllerLayer\AnonymousController.class
+com\agregoldtest1\agregoldtest1\ServletInitializer.class
+com\agregoldtest1\agregoldtest1\ControllerLayer\FarmerController.class
